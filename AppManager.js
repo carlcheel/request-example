@@ -1,8 +1,8 @@
-const AppDataServiceCallback = require('./AppDataServiceCallback');
+const AppDataService = require('./AppDataService');
 
 class AppManager {
     getSomeData() {
-        const dataService = new AppDataServiceCallback();
+        const dataService = new AppDataService();
         return dataService.apiCall()
             .then(response => {
                 console.log(response);
